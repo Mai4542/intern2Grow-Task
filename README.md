@@ -1,4 +1,4 @@
-# 🚀 Inter2Grow Task
+# 🚀 Intern2Grow Task
 
 A Next.js project showcasing a products listing page and product details page using Static Site Generation (SSG) and Tailwind CSS.
 
