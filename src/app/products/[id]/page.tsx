@@ -1,10 +1,17 @@
 import ProductInfo from "@/utils/productInfo";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 const Product = async (props: any) => {
     const { id } =await props.params;
     const res = await fetch(`https://dummyjson.com/products/${id}`);
-    const data: ProductInfo = await res.json();
+    if (!res.ok) {
+  notFound(); 
+}
+    const data = await res.json();
+if (!data || !data.id) {
+  notFound(); 
+}
 
     return (
         <>
